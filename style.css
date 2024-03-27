@@ -25,6 +25,14 @@ section.section-one {
   font-weight: 300;
   columns: #d91570;
 }
+section.section-one .section-title {
+  text-align: center;
+  position: relative;
+  margin-bottom: -8.5vw;
+  z-index: 4;
+  font-family: "Roboto", Roboto;
+  font-weight: 300;
+}
 .ribbon-group .ribbon {
   display: inline-block;
   width: 40vw;
@@ -34,8 +42,7 @@ section.section-one {
 
 .ribbon.ribbon-1 .ribbon-container {
   padding: 1vw 2vw 1vw 0;
-  position: relative;
-  right: -40vw;
+  right: 40vw;
   float: right;
   transition: all 0.3s;
   width: 25vw;
@@ -87,8 +94,77 @@ section.section-one {
   right: 0;
 }
 
-.ribbon.ribbon-2 .ribbon-container .title {
+.ribbon.ribbon-2 .ribbon-container .slide {
+  left: 0;
+}
+.ribbon-group .ribbon.ribbon-2 .ribbon-container .title {
+  padding: 1vw 0 1vw 2vw;
+  float: left;
+  left: -40vw;
+  transition: all 1.5s;
+  background-color: #f5834f;
   text-align: left;
+}
+.ribbon .ribbon-container .ribbon-fold {
+  background-color: #db521e;
+  width: 11vw;
+  height: 4.5vw;
+  position: absolute;
+  bottom: -1.5vw;
+}
+.ribbon-group .ribbon.ribbon-2 .ribbon-container .ribbon-fold {
+  right: -11vw;
+}
+
+.ribbon-group .ribbon.ribbon-2 .ribbon-container .ribbon-fold:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 2.3vw solid #db521e;
+  border-right: 2.3vw solid transparent;
+  position: absolute;
+  right: -2.2vw;
+  top: 0;
+}
+.ribbon-group .ribbon.ribbon-2 .ribbon-container .ribbon-fold .fold {
+  left: -4vw;
+}
+
+.ribbon-group .ribbon .ribbon-container .ribbon-fold .fold {
+  background-color: #db521e;
+  position: absolute;
+  bottom: 0;
+  width: 4vw;
+  height: 1.5vw;
+}
+
+.ribbon-group .ribbon.ribbon-2 .ribbon-container .ribbon-fold:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 2.3vw solid #db521e;
+  border-right: 2.3vw solid transparent;
+  position: absolute;
+  right: -2.2vw;
+  bottom: 0;
+}
+/* .ribbon .ribbon-2 .ribbon-fold {
+  left: -11vw;
+  background-color: #db521e;
+  width: 11vw;
+  height: 4.5vw;
+  position: absolute;
+  bottom: -1.5vw;
+} */
+/* .ribbon-container {
+  width: 25vw;
+  background-color: #f5834f;
+  position: relative;
+} */
+*,
+:after,
+:before {
+  box-sizing: border-box;
 }
 .ribbon.ribbon-1 .ribbon-container.slide {
   right: 0;
